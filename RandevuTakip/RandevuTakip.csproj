@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFC3FCBD-4AA0-4E6B-8913-38BC45BDB19C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RandevuTakip</RootNamespace>
+    <AssemblyName>RandevuTakip</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp">
+      <HintPath>..\..\..\Yeni klasör\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>..\..\..\Yeni klasör\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms">
+      <HintPath>..\..\..\Yeni klasör\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormDoktorBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorBilgi.Designer.cs">
+      <DependentUpon>FormDoktorBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoktorBilgiDüzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorBilgiDüzenle.Designer.cs">
+      <DependentUpon>FormDoktorBilgiDüzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoktorDuyuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorDuyuru.Designer.cs">
+      <DependentUpon>FormDoktorDuyuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoktorGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorGiris.Designer.cs">
+      <DependentUpon>FormDoktorGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoktorInternet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoktorInternet.Designer.cs">
+      <DependentUpon>FormDoktorInternet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiris.Designer.cs">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHastaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHastaGiris.Designer.cs">
+      <DependentUpon>FormHastaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHastaBilgiDüzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHastaBilgiDüzenle.Designer.cs">
+      <DependentUpon>FormHastaBilgiDüzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHastaRandevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHastaRandevu.Designer.cs">
+      <DependentUpon>FormHastaRandevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHastaKayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHastaKayıt.Designer.cs">
+      <DependentUpon>FormHastaKayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSekreterBransPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSekreterBransPaneli.Designer.cs">
+      <DependentUpon>FormSekreterBransPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSekreterDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSekreterDetay.Designer.cs">
+      <DependentUpon>FormSekreterDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSekreterDoktorPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSekreterDoktorPaneli.Designer.cs">
+      <DependentUpon>FormSekreterDoktorPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSekreterGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSekreterGiris.Designer.cs">
+      <DependentUpon>FormSekreterGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSekreterRandevuListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSekreterRandevuListe.Designer.cs">
+      <DependentUpon>FormSekreterRandevuListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSetBransAdları.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSetBransAdları.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneSistemiDataSetdoktorbilgisi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneSistemiDataSetdoktorbilgisi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="randevu sql baglantısı.cs" />
+    <EmbeddedResource Include="FormDoktorBilgi.resx">
+      <DependentUpon>FormDoktorBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoktorBilgiDüzenle.resx">
+      <DependentUpon>FormDoktorBilgiDüzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoktorDuyuru.resx">
+      <DependentUpon>FormDoktorDuyuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoktorGiris.resx">
+      <DependentUpon>FormDoktorGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoktorInternet.resx">
+      <DependentUpon>FormDoktorInternet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiris.resx">
+      <DependentUpon>FormGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHastaGiris.resx">
+      <DependentUpon>FormHastaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHastaBilgiDüzenle.resx">
+      <DependentUpon>FormHastaBilgiDüzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHastaRandevu.resx">
+      <DependentUpon>FormHastaRandevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHastaKayıt.resx">
+      <DependentUpon>FormHastaKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSekreterBransPaneli.resx">
+      <DependentUpon>FormSekreterBransPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSekreterDetay.resx">
+      <DependentUpon>FormSekreterDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSekreterDoktorPaneli.resx">
+      <DependentUpon>FormSekreterDoktorPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSekreterGiris.resx">
+      <DependentUpon>FormSekreterGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSekreterRandevuListe.resx">
+      <DependentUpon>FormSekreterRandevuListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="HastaneSistemiDataSet.xsc">
+      <DependentUpon>HastaneSistemiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet.xss">
+      <DependentUpon>HastaneSistemiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet1.xsc">
+      <DependentUpon>HastaneSistemiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet1.xss">
+      <DependentUpon>HastaneSistemiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet10.xsc">
+      <DependentUpon>HastaneSistemiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet10.xss">
+      <DependentUpon>HastaneSistemiDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet11.xsc">
+      <DependentUpon>HastaneSistemiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet11.xss">
+      <DependentUpon>HastaneSistemiDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet2.xsc">
+      <DependentUpon>HastaneSistemiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet2.xss">
+      <DependentUpon>HastaneSistemiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet3.xsc">
+      <DependentUpon>HastaneSistemiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet3.xss">
+      <DependentUpon>HastaneSistemiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet4.xsc">
+      <DependentUpon>HastaneSistemiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet4.xss">
+      <DependentUpon>HastaneSistemiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet5.xsc">
+      <DependentUpon>HastaneSistemiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet5.xss">
+      <DependentUpon>HastaneSistemiDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet6.xsc">
+      <DependentUpon>HastaneSistemiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet6.xss">
+      <DependentUpon>HastaneSistemiDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet7.xsc">
+      <DependentUpon>HastaneSistemiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet7.xss">
+      <DependentUpon>HastaneSistemiDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet8.xsc">
+      <DependentUpon>HastaneSistemiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet8.xss">
+      <DependentUpon>HastaneSistemiDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet9.xsc">
+      <DependentUpon>HastaneSistemiDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSet9.xss">
+      <DependentUpon>HastaneSistemiDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSetBransAdları.xsc">
+      <DependentUpon>HastaneSistemiDataSetBransAdları.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSetBransAdları.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSetBransAdları.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSetBransAdları.xss">
+      <DependentUpon>HastaneSistemiDataSetBransAdları.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSetdoktorbilgisi.xsc">
+      <DependentUpon>HastaneSistemiDataSetdoktorbilgisi.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneSistemiDataSetdoktorbilgisi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneSistemiDataSetdoktorbilgisi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneSistemiDataSetdoktorbilgisi.xss">
+      <DependentUpon>HastaneSistemiDataSetdoktorbilgisi.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
